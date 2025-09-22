@@ -1,36 +1,39 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# To-Do 3D — Assessment Submission
 
-## Getting Started
+## Summary
+A small, frontend-only To-Do app built with Next.js (App Router), Tailwind CSS and an interactive 3D progress widget implemented using React Three Fiber. Data persists to `localStorage`.
 
-First, run the development server:
+## Highlights
+- Next.js App Router + TypeScript
+- Tailwind CSS UI
+- State: `useReducer` + Context
+- 3D visualization: `@react-three/fiber` & `@react-three/drei` (stars light up based on completion)
+- Unit tests with Jest + React Testing Library
+- Deployed to Vercel (live link in top of repo)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Run locally (1-2 steps)
+1. `git clone <repo>` && `cd repo`
+2. `npm install` && `npm run dev`
+Open http://localhost:3000
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Tests
+`npm test`
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Architecture
+- `app/` — Next.js App Router
+- `src/context` — state + localStorage hydration
+- `src/components` — UI & 3D components
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Trade-offs & notes
+- Chose Context + reducer for simplicity and testability; Redux would be warranted as app scale grows.
+- Persistence via `localStorage` (satisfies frontend-only constraint). For multi-device sync, add backend API.
+- 3D widget kept minimal to ensure performance and accessibility.
 
-## Learn More
+## Future improvements
+- Add edit task modal, tags, due dates
+- Add small animation to 3D widget for completed tasks
+- Server-side sync and auth if needed
 
-To learn more about Next.js, take a look at the following resources:
+## Demo
+See DEMO.md (or run `npm run dev` and follow the Quick Demo in the repo root).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
