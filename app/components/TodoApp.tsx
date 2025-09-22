@@ -126,7 +126,7 @@ export default function TodoApp() {
           </aside>
         </main>
 
-        <footer className="mt-6 text-center text-xs text-slate-400">Made with ♥ for your assessment — present this during your demo.</footer>
+        <footer className="mt-6 text-center text-xs text-slate-400">Made with ♥ for your assessment</footer>
       </div>
     </div>
   );
