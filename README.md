@@ -8,7 +8,6 @@ A small, frontend-only To-Do app built with Next.js (App Router), Tailwind CSS a
 - Tailwind CSS UI
 - State: `useReducer` + Context
 - 3D visualization: `@react-three/fiber` & `@react-three/drei` (stars light up based on completion)
-- Unit tests with Jest + React Testing Library
 - Deployed to Vercel (live link in top of repo)
 
 ## Run locally (1-2 steps)
@@ -21,8 +20,8 @@ Open http://localhost:3000
 
 ## Architecture
 - `app/` — Next.js App Router
-- `src/context` — state + localStorage hydration
-- `src/components` — UI & 3D components
+- `context` — state + localStorage hydration
+- `components` — UI & 3D components
 
 ## Trade-offs & notes
 - Chose Context + reducer for simplicity and testability; Redux would be warranted as app scale grows.
@@ -35,5 +34,5 @@ Open http://localhost:3000
 - Server-side sync and auth if needed
 
 ## Demo
-See DEMO.md (or run `npm run dev` and follow the Quick Demo in the repo root).
+See https://todo-3d-assessment.vercel.app/ (or run `npm run dev` and follow the Quick Demo in the repo root).
 
