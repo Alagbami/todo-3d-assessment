@@ -23,7 +23,9 @@ export default function TodoApp() {
       <div className="max-w-6xl mx-auto">
         <header className="flex items-center justify-between mb-6">
           <div>
-            <h1 className="text-3xl md:text-4xl font-extrabold tracking-tight text-slate-900">To-Do 3D</h1>
+            <h1 className="text-3xl md:text-4xl font-extrabold tracking-tight text-slate-900">To-Do 3D App Adeleke Abiodun Dapo</h1>
+            <p className="text-sm text-slate-500 mt-1">adelekeabiodun1996@gmail.com</p>
+            <p className="text-sm text-slate-500 mt-1">+2348144807421</p>
             <p className="text-sm text-slate-500 mt-1">A polished responsive to-do app with interactive 3D progress.</p>
           </div>
 
